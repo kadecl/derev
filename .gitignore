@@ -1,0 +1,12 @@
+# gitignore
+# txtはいらない
+*.txt
+
+# outputも巨大なのでいらない
+output/
+
+# .m~ もいらない
+*.m~
+
+# セキュリティ的に不味そうなので除外
+GitCommitter.m
