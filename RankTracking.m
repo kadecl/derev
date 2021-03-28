@@ -1,10 +1,10 @@
 % load and resample
 fsResample = 8000;
-flag = 1; % 1でsvd, 0でLU
+flag = 0; % 1でsvd, 0でLU
 if( flag )
-    fprintf( "rank tracking using SVD" );
+    fprintf( "rank tracking using SVD\n" );
 else
-    fprintf( "rank tracking using LU decomposition" );
+    fprintf( "rank tracking using LU decomposition\n" );
 end
 
 % IRの長さの設定
@@ -68,4 +68,7 @@ title( 'ratio of last pivot.');
 last pivotが0で亡くなるのは当然である．
 pivotが0になった段階で処理を止めて，ランクがいくつ
 落ちているかを調べるという方法がいいかも
+
+大体のサイズをlu分解もどきで探って
+正確なサイズを決定する時はSVD使うのは良さそう
 %}
